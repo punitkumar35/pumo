@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,15 +23,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <!-- Main Styles -->
-<link rel="preload" href="css/style.css" as="style">
-<link rel="stylesheet" href="css/style.css">
-<link rel="preload" href="css/responsive.css" as="style">
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="preload" href="css/style.css?v=20260927-2" as="style">
+<link rel="stylesheet" href="css/style.css?v=20260927-2">
+<link rel="preload" href="css/responsive.css?v=20260927-2" as="style">
+<link rel="stylesheet" href="css/responsive.css?v=20260927-2">
 
 <!-- Fonts: Load only once + swap to reduce CLS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&family=Raleway:wght@400;700&family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&family=Raleway:wght@400;700&family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
 
 <!-- Jivochat (async) -->
 <!--<script src="//code.jivosite.com/widget/oBTVBilA3n" async></script>-->
@@ -188,8 +189,13 @@
         });
     }
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 40) { siteHeader.classList.add('scrolled'); }
-        else { siteHeader.classList.remove('scrolled'); }
+        if (window.scrollY > 40) {
+            siteHeader.classList.add('scrolled');
+            document.body.classList.add('header-scrolled');
+        } else {
+            siteHeader.classList.remove('scrolled');
+            document.body.classList.remove('header-scrolled');
+        }
         if (scrollProgress) {
             var doc = document.documentElement;
             var total = doc.scrollHeight - doc.clientHeight;
@@ -198,30 +204,33 @@
         }
     });
 </script>
+        }
+    });
+</script>
     <section>
         <div class="swiper homeSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="assets/banner/high-package-placement.webp" alt="best ai tech campus" loading="lazy" class="deskOnly">
-                    <img src="assets/mbl_banner/high-package-mbl-banner.webp" alt="best ai tech campus" loading="lazy" class="mblOnly">
+                    <img src="assets/banner/high-package-placement.webp" alt="best ai tech campus" loading="eager" class="deskOnly">
+                    <img src="assets/mbl_banner/high-package-mbl-banner.webp" alt="best ai tech campus" loading="eager" class="mblOnly">
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/banner/ai-integrated.webp" alt="ai integrated courses" loading="lazy" class="deskOnly">
-                    <img src="assets/mbl_banner/mbl-ai-integrated.webp" alt="gen ai tools" loading="lazy" class="mblOnly">
+                    <img src="assets/banner/ai-integrated.webp" alt="ai integrated courses" loading="eager" class="deskOnly">
+                    <img src="assets/mbl_banner/mbl-ai-integrated.webp" alt="gen ai tools" loading="eager" class="mblOnly">
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/banner/banner-hero.webp" alt="best software training institute" loading="lazy" class="deskOnly">
-                    <img src="assets/mbl_banner/1.webp" alt="best software training institute" loading="lazy" class="mblOnly">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/banner/2.webp" alt="pumo technovation" loading="lazy" class="deskOnly">
-                    <img src="assets/mbl_banner/2.webp" alt="pumo technovation" loading="lazy" class="mblOnly">
+                    <img src="assets/banner/banner-hero.webp" alt="best software training institute" loading="eager" class="deskOnly">
+                    <img src="assets/mbl_banner/1.webp" alt="best software training institute" loading="eager" class="mblOnly">
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="assets/banner/4.webp" alt="pumo technovation placements" loading="lazy" class="deskOnly">
-                    <img src="assets/mbl_banner/5.webp" alt="pumo technovation placements" loading="lazy" class="mblOnly">
+                    <img src="assets/banner/2.webp" alt="pumo technovation" loading="eager" class="deskOnly">
+                    <img src="assets/mbl_banner/2.webp" alt="pumo technovation" loading="eager" class="mblOnly">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/banner/4.webp" alt="pumo technovation placements" loading="eager" class="deskOnly">
+                    <img src="assets/mbl_banner/5.webp" alt="pumo technovation placements" loading="eager" class="mblOnly">
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -275,7 +284,7 @@
         <div class="container">
             <div class="row pumo_tech">
                 <div class="col-lg-6 col-sm-12">
-                    <img loading="lazy" src="assets/banner/pumo-side-banner.webp" alt="">
+                    <img loading="lazy" src="assets/banner/pumo-side-banner.webp" alt="" loading="eager">
                 </div>
 
                 <div class="col-lg-6 col-sm-12">
@@ -283,7 +292,7 @@
                     <h1>We Build <span class="bg_yellow"> Industry-Ready IT Professionals</h1>
                     <h2>Pumo Technovation</h2>
                     <h6>Launch your tech career with industry-aligned training in the skills companies actually hire for.</h6>
-                    <p>We are India’s premier IT training and software solutions company. From full-stack web development and AI/ML to cloud, DevOps, and cybersecurity, we deliver real-project training, expert mentorship, and dedicated placement support across India and globally.</p>
+                    <p>We are Indiaâ€™s premier IT training and software solutions company. From full-stack web development and AI/ML to cloud, DevOps, and cybersecurity, we deliver real-project training, expert mentorship, and dedicated placement support across India and globally.</p>
 
                     <div class="about_button">
                         <a href="about.html">
@@ -467,7 +476,7 @@
                 <div class="col-lg-5 staff_col">
                     <h5>Software Development</h5>
                     <p>
-                            We design, build, and ship production-grade software for clients worldwide — web platforms, AI-driven products, cloud infrastructure, and secure enterprise systems — while training the next generation of engineers on real codebases.
+                            We design, build, and ship production-grade software for clients worldwide â€” web platforms, AI-driven products, cloud infrastructure, and secure enterprise systems â€” while training the next generation of engineers on real codebases.
                         </p>
                     <a href="https://wa.me/+919597916888">
                         <button type="button" class="btn view_course mt-4">
@@ -648,7 +657,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -663,7 +672,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -678,7 +687,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -693,7 +702,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -708,7 +717,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -723,7 +732,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -748,7 +757,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -763,7 +772,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -778,7 +787,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -793,7 +802,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -819,7 +828,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -834,7 +843,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -849,7 +858,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -875,7 +884,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -890,7 +899,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -905,7 +914,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -931,7 +940,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -946,7 +955,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -961,7 +970,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -987,7 +996,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1002,7 +1011,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1017,7 +1026,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1058,7 +1067,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1073,7 +1082,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1088,7 +1097,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1103,7 +1112,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1118,7 +1127,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1133,7 +1142,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1166,7 +1175,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1181,7 +1190,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1196,7 +1205,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1211,7 +1220,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1244,7 +1253,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1259,7 +1268,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1274,7 +1283,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1307,7 +1316,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1322,7 +1331,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1337,7 +1346,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1370,7 +1379,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1385,7 +1394,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1400,7 +1409,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1433,7 +1442,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1448,7 +1457,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1463,7 +1472,7 @@
             <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
             <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <p>View Course</p>
-                <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
             </button>
         </div>
     </div>
@@ -1567,241 +1576,90 @@
         }
     });
 </script>
-    <section class="trending_course stickySlider">
+        <section class="editorial-trending">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 trending_content">
-                <h5>Trending Course</h5>
-                <p>
-                    "At Pumo Technovation, our cutting-edge labs are dedicated to honing practical skills and combatting unemployment.
-                    continuously evolving to embrace the latest in-demand technologies and trends."
-                </p>
-
-                <h6>Choose the right way to upgrade your career.</h6>
+        <div class="et-header">
+            <div class="et-header__main">
+                <p class="et-eyebrow">Trending Courses</p>
+                <h2 class="et-headline">Choose the right way to <em>upgrade</em> your career</h2>
             </div>
+            <aside class="et-pull">
+                <p>At Pumo Technovation, our cutting-edge labs hone practical skills &mdash; continuously evolving to embrace the technologies that matter next.</p>
+            </aside>
+        </div>
 
-            <div class="col-lg-9">
-                <div class="swiper trendingSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide ">
-                            <div class="course-card">
-                                <div class="image-bg">
-                                    <img src="assets/images/course-offered/aws.webp" loading="lazy" alt="Cloud Computing & DevOps Course">
-                                </div>
-                                <div class="text-overlay">
-                                    <h2>Cloud Computing & DevOps Course</h2>
-                                    <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
-
-                                    <!-- <a href="#" class="view_course">
-                                        <p>View Course</p>
-                                        <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
-                                    </a> -->
-
-                                    <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdropOne">
-                                        <p>View Course</p>
-                                        <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="Cloud Computing & DevOps Course">
-                                    </button>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="course-card">
-                                <div class="image-bg">
-                                    <img src="assets/images/course-offered/artificial-intellegence.webp" loading="lazy" alt="Artificial Intelligence Course">
-                                </div>
-                                <div class="text-overlay">
-                                    <h2>Artificial Intelligence Course</h2>
-                                    <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support  </p>
-
-                                    <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdropOne">
-                                        <p>View Course</p>
-                                        <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="Artificial Intelligence Course">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="course-card">
-                                <div class="image-bg">
-                                    <img src="assets/images/course-offered/ethical-hacking.webp" loading="lazy" alt="Cybersecurity Course">
-                                </div>
-                                <div class="text-overlay">
-                                    <h2>Cybersecurity Course</h2>
-                                    <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
-
-                                    <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdropOne">
-                                        <p>View Course</p>
-                                        <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="Cybersecurity Course">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="course-card">
-                                <div class="image-bg">
-                                    <img src="assets/images/course-offered/full-stack.webp" loading="lazy" alt="Full Stack Development Course">
-                                </div>
-                                <div class="text-overlay">
-                                    <h2>Full Stack Development Course</h2>
-                                    <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support  </p>
-
-                                    <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdropOne">
-                                        <p>View Course</p>
-                                        <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="Full Stack Development Course">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="course-card">
-                                <div class="image-bg">
-                                    <img src="assets/images/course-offered/data-science.webp" loading="lazy" alt="Data Science Course">
-                                </div>
-                                <div class="text-overlay">
-                                    <h2>Data Science Course</h2>
-                                    <p>Project based assessment | World-class courseware | Industry recognized certificate | Placement Support </p>
-
-                                    <button type="button" class="btn view_course" data-bs-toggle="modal" data-bs-target="#staticBackdropOne">
-                                        <p>View Course</p>
-                                        <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="Data Science Course">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="swiper-slide card_style">
-                            <a href="courses.html">
-                                <div class="course-card">
-                                    <div class="image-bg after">
-                                        <img src="assets/images/color-img.png" loading="lazy" alt="click more to see IT courses">
-                                    </div>
-                                    <div class="text-overlay click_more">
-                                        <p>See More</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-next">
-                        <img src="assets/icons/right_arrow.png" loading="lazy" alt="right arrow">
-                    </div>
-                    <div class="swiper-button-prev">
-                        <img src="assets/icons/left_arrow.png " loading="lazy" alt="left arrow">
-                    </div>
+        <div class="et-grid">
+            <article class="et-card et-card--feature">
+                <figure class="et-media">
+                    <img src="assets/images/course-offered/aws.webp" alt="Cloud Computing &amp; DevOps Course" loading="eager">
+                </figure>
+                <div class="et-body">
+                    <p class="et-index">01<span class="et-index__sep"> / </span>Infrastructure</p>
+                    <h3 class="et-title">Cloud Computing &amp; DevOps</h3>
+                    <p class="et-desc">AWS &amp; Azure, Docker, Kubernetes and CI/CD &mdash; the deployment toolkit behind every modern product.</p>
+                    <a href="courses.html" class="et-link">Explore Syllabus <span class="et-arrow">&rarr;</span></a>
                 </div>
-            </div>
+            </article>
+
+            <article class="et-card">
+                <figure class="et-media">
+                    <img src="assets/images/course-offered/artificial-intellegence.webp" alt="Artificial Intelligence Course" loading="eager">
+                </figure>
+                <div class="et-body">
+                    <p class="et-index">02<span class="et-index__sep"> / </span>Intelligence</p>
+                    <h3 class="et-title">Artificial Intelligence</h3>
+                    <p class="et-desc">From classic ML algorithms to generative AI &mdash; train, fine-tune and ship models with Python.</p>
+                    <a href="courses.html" class="et-link">Explore Syllabus <span class="et-arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <article class="et-card">
+                <figure class="et-media">
+                    <img src="assets/images/course-offered/ethical-hacking.webp" alt="Cybersecurity Course" loading="eager">
+                </figure>
+                <div class="et-body">
+                    <p class="et-index">03<span class="et-index__sep"> / </span>Security</p>
+                    <h3 class="et-title">Cybersecurity</h3>
+                    <p class="et-desc">Penetration testing, network defence and SOC operations &mdash; security from day one.</p>
+                    <a href="courses.html" class="et-link">Explore Syllabus <span class="et-arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <article class="et-card">
+                <figure class="et-media">
+                    <img src="assets/images/course-offered/full-stack.webp" alt="Full Stack Development Course" loading="eager">
+                </figure>
+                <div class="et-body">
+                    <p class="et-index">04<span class="et-index__sep"> / </span>Engineering</p>
+                    <h3 class="et-title">Full Stack Development</h3>
+                    <p class="et-desc">Build complete web apps end-to-end with React, Node.js, Express and MongoDB.</p>
+                    <a href="courses.html" class="et-link">Explore Syllabus <span class="et-arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <article class="et-card">
+                <figure class="et-media">
+                    <img src="assets/images/course-offered/data-science.webp" alt="Data Science Course" loading="eager">
+                </figure>
+                <div class="et-body">
+                    <p class="et-index">05<span class="et-index__sep"> / </span>Analytics</p>
+                    <h3 class="et-title">Data Science</h3>
+                    <p class="et-desc">Turn raw data into decisions with Python, SQL, Power BI and machine-learning pipelines.</p>
+                    <a href="courses.html" class="et-link">Explore Syllabus <span class="et-arrow">&rarr;</span></a>
+                </div>
+            </article>
+
+            <a href="courses.html" class="et-catalog">
+                <span class="et-catalog__text">View the full course catalog</span>
+                <span class="et-arrow">&rarr;</span>
+            </a>
         </div>
     </div>
 </section>
 
-<div class="modal fade" id="staticBackdropOne" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="form_des">
-                    <div class="offer-text">
-                        <h5>Wait! <br> Before you go, </h5>
-                        <h6>Here is a 30% Discount.</h6>
 
-                        <p>in your Course Fee</p>
-                    </div> 
 
-                    <div class="form">
-                        <form id="trendingForm" name="google-sheet"
-                        action="https://script.google.com/macros/s/AKfycbyQDTjBIHrqrcg-gg9pp5orxQZIxfjgvLsuVl3nlQ7L6dgXsP14AhCkKez_beQrhZcx/exec">
-                            
-                        <input type="text" name="Name" id="name" placeholder="Enter Your Name" required>
 
-                        <input type="tel" name="Phone Number" placeholder="Enter Mobile Number" pattern="\d{10}" id="phoneTrend" required>
-
-                        <input type="email" name="Email" placeholder="Enter Your Email Id" required>
-
-                        <input type="text" name="Course" placeholder="Enter Desired Course" required>
-
-                        <select name="Branch" required>
-    <option value="" disabled selected>Preferred Branch</option>
-    <option value="" class="d-none"></option>
-    <option value="Bangalore - Marathahalli">Bangalore - Marathahalli</option>
-    <option value="BotData" class="d-none">No Data</option>
-</select>
-                        
-                        <input type="text" name="honeypot" id="honeypot" style="display:none;" tabindex="-1" autocomplete="off">
-
-                            <button id="submitBtn" class="sumbit_btn" type="submit">
-                                <span class="btn--submit">Submit</span>
-                                <div class="btn--submitting d-none">Submitting.....</div>
-                            </button>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    const trendForm = document.getElementById("trendingForm");
-    const trendSubmitButton = document.querySelector(".btn--submit");
-
-    let isTrendSubmit = false;
-
-    trendForm.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        
-    const honeypotField = document.getElementById("honeypot");
-    if (honeypotField.value) {
-        console.warn("Spam detected. Submission aborted.");
-        return;
-    }
-
-        if (isTrendSubmit) return; // Prevent multiple submissions
-        isTrendSubmit = true;
-
-        // Disable the submit button to prevent further clicks
-        trendSubmitButton.disabled = true;
-
-        // Hide submit button and show the "submitting" button
-        document.querySelector(".btn--submit").classList.add("d-none");
-        document.querySelector(".btn--submitting").classList.remove("d-none");
-
-        const dataForm = new FormData(trendForm);
-        const actionTrend = e.target.action;
-        
-        try {
-            const res = await fetch(actionTrend, {
-                method: "POST",
-                body: dataForm,
-            });
-
-            if (res.ok) {
-                // If submission is successful, redirect to thank-you page
-                window.location = "/thank-you";
-            } else {
-                throw new Error('Failed to submit');
-            }
-        } catch (error) {
-            console.error(error, "Submission error:", error);
-        } finally {
-            
-            isTrendSubmit = false;
-            trendSubmitButton.disabled = false;
-
-            document.querySelector(".btn--submit").classList.remove("d-none");
-            document.querySelector(".btn--submitting").classList.add("d-none");
-        }
-    });
-</script>
 
     <section class="staff_solution">
         <div class="container">
@@ -1913,45 +1771,85 @@
         </div>
     </div>
 </section>
-    <section class="achievements_new">
+        <section class="achievements_new">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex justify-content-between">
-                    <div class="d-block">
-                        <div class="card">
-                            <img src="assets/icons/1.svg" alt="">
-                            <h6>7500+</h6>
-                            <p>Students Trained Per Year</p>
-                        </div>
-                        <div class="card">
-                            <img src="assets/icons/3.svg" alt="">
-                            <h6>5000+</h6>
-                            <p>Students Placed Per Year</p>
-                        </div>
-                    </div>
-
-                    <div class="d-block card_block_two">
-                        <div class="card">
-                            <img src="assets/icons/2.svg" alt="">
-                            <h6>200+</h6>
-                            <p>Industrial Project Completed</p>
-                        </div>
-                        <div class="card">
-                            <img src="assets/icons/5.svg" alt="">
-                            <h6>50+</h6>
-                            <p>Awards Won</p>
-
-                        </div>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                                        <div class="stats-grid">
+                        <article class="stat-card" data-index="01">
+                            <span class="stat-card__index">01</span>
+                            <div class="stat-card__icon"><i class="bi bi-mortarboard"></i></div>
+                            <h3 class="stat-card__number"><span class="stat-count" data-count="7500">0</span><span class="stat-suffix">+</span></h3>
+                            <p class="stat-card__label">Students Trained Per Year</p>
+                            <p class="stat-card__desc">IT professionals shaped every year through industry-led, project-first programs.</p>
+                        </article>
+                        <article class="stat-card" data-index="02">
+                            <span class="stat-card__index">02</span>
+                            <div class="stat-card__icon"><i class="bi bi-briefcase"></i></div>
+                            <h3 class="stat-card__number"><span class="stat-count" data-count="5000">0</span><span class="stat-suffix">+</span></h3>
+                            <p class="stat-card__label">Students Placed Per Year</p>
+                            <p class="stat-card__desc">Graduates placed in top product and service companies across India.</p>
+                        </article>
+                        <article class="stat-card" data-index="03">
+                            <span class="stat-card__index">03</span>
+                            <div class="stat-card__icon"><i class="bi bi-terminal"></i></div>
+                            <h3 class="stat-card__number"><span class="stat-count" data-count="200">0</span><span class="stat-suffix">+</span></h3>
+                            <p class="stat-card__label">Industrial Projects Completed</p>
+                            <p class="stat-card__desc">Live, production-grade projects delivered with our corporate partners.</p>
+                        </article>
+                        <article class="stat-card" data-index="04">
+                            <span class="stat-card__index">04</span>
+                            <div class="stat-card__icon"><i class="bi bi-trophy"></i></div>
+                            <h3 class="stat-card__number"><span class="stat-count" data-count="50">0</span><span class="stat-suffix">+</span></h3>
+                            <p class="stat-card__label">Awards Won</p>
+                            <p class="stat-card__desc">Recognitions for excellence in training, placement and innovation.</p>
+                        </article>
                     </div>
                 </div>
 
-                <div class="col-lg-5 mt-5 achieve_content">
-                    <h5>Genuine efforts always shine—numbers simply reflect the truth.</h5>
-                    <p>Here at Pumo Technovation, we focus on providing technical knowledge along with building a profile of each and every student with White Glove service and support because the end goal of our team is to make the students job-ready. Thus, our IT Courses have been proven to be the best for students. We, being one of the most preferred Software Training Institutes in India, work hard on giving our students the best learning experience.</p>
+                <div class="col-lg-5">
+                    <div class="stats-copy">
+                        <p class="stats-eyebrow">Our Impact</p>
+                        <h2 class="stats-headline">Real skills drive real careers &mdash; <em>our numbers speak for themselves.</em></h2>
+                        <p class="stats-desc">At Pumo Technovation, we bridge the gap between classroom concepts and industry demands. Through hands-on, project-first training and dedicated career mentorship, we ensure every student graduates with production-grade skills and direct placement readiness.</p>
+                        <a href="placement.html" class="stats-cta">Explore Placement Records <span class="stats-cta__arrow">&rarr;</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+<script>
+    (function () {
+        var section = document.querySelector('.achievements_new');
+        if (!section || !('IntersectionObserver' in window)) return;
+        var counters = section.querySelectorAll('.stat-count');
+        var done = false;
+        function animate(el) {
+            var target = parseInt(el.getAttribute('data-count'), 10);
+            var start = null;
+            var dur = 1600;
+            function step(ts) {
+                if (!start) start = ts;
+                var p = Math.min((ts - start) / dur, 1);
+                var eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(target * eased).toLocaleString('en-IN');
+                if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting && !done) {
+                    done = true;
+                    counters.forEach(animate);
+                    obs.disconnect();
+                }
+            });
+        }, { threshold: 0.35 });
+        obs.observe(section);
+    })();
+</script>
 
     <section class="com_logo_sec">
         <h5>Where Do Our Students Work?</h5>
@@ -2208,7 +2106,7 @@
 <div>
                 <a href="courses.html" class="view_all">
                     <p>View All</p>
-                    <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                    <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
                 </a>
             </div>
         </div>
@@ -2389,7 +2287,7 @@
             <div class="d-flex justify-content-end">
                 <a href="courses.html" class="view_all">
                     <p>View All</p>
-                    <img src="assets/icons/arrow_warm_up.png" loading="lazy" alt="">
+                    <img src="assets/icons/arrow_warm_up.png" alt="" width="24" height="24">
                 </a>
             </div>
         </div>
@@ -2573,9 +2471,11 @@
                     </div>
 
                 </div>
-                <div class="swiper-button-next">
+                <div class="swiper-button-next placement-next">
+                    <img src="assets/icons/arrow-right-circle.svg" alt="next slide">
                 </div>
-                <div class="swiper-button-prev">
+                <div class="swiper-button-prev placement-prev">
+                    <img src="assets/icons/arrow-left-circle.svg" alt="previous slide">
                 </div>
             </div>
         </div>
@@ -2942,27 +2842,7 @@
     });
 </script>
 
-<script>
-    var trendingCourseSwiper = new Swiper(".trendingSwiper", {
-        breakpoints: {
-            0: {
-                slidesPerView: 1.2,
-            },
-            660: {
-                slidesPerView: 1.2,
-            },
-            1200: {
-                slidesPerView: 2.5,
-            }
-        },
-        loop: false,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
+
 
 
 
@@ -3369,27 +3249,7 @@
     });
 </script>
 
-<script>
-    var trendingCourseSwiper = new Swiper(".trendingSwiper", {
-        breakpoints: {
-            0: {
-                slidesPerView: 1.2,
-            },
-            660: {
-                slidesPerView: 1.2,
-            },
-            1200: {
-                slidesPerView: 2.5,
-            }
-        },
-        loop: false,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
+
 
 
 
@@ -3811,27 +3671,7 @@
     });
 </script>
 
-<script>
-    var trendingCourseSwiper = new Swiper(".trendingSwiper", {
-        breakpoints: {
-            0: {
-                slidesPerView: 1.2,
-            },
-            660: {
-                slidesPerView: 1.2,
-            },
-            1200: {
-                slidesPerView: 2.5,
-            }
-        },
-        loop: false,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
+
 
 
 
@@ -4144,6 +3984,36 @@
                 slidesPerView: 3,
                 spaceBetween: 30,
             }
+        }
+    });
+</script>
+<script>
+    // 2026: High-Package Placements auto-playing slideshow
+    document.addEventListener('DOMContentLoaded', function () {
+        var placementEl = document.querySelector('.placementSwiper');
+        if (placementEl) {
+            if (placementEl.swiper) {
+                placementEl.swiper.destroy(true, true);
+            }
+            new Swiper('.placementSwiper', {
+                breakpoints: {
+                    0: { slidesPerView: 1, spaceBetween: 14 },
+                    660: { slidesPerView: 2, spaceBetween: 18 },
+                    1200: { slidesPerView: 3, spaceBetween: 22 }
+                },
+                loop: true,
+                autoplay: {
+                    delay: 2600,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                speed: 650,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.placement-next',
+                    prevEl: '.placement-prev'
+                }
+            });
         }
     });
 </script>
