@@ -1,0 +1,13 @@
+# Tooling internals
+.codegraph/
+.omo/
+.playwright-mcp/
+
+# OS / editor junk
+Thumbs.db
+Desktop.ini
+*.bak
+*~
+
+# Temp
+_*.html

@@ -1,0 +1,2976 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="Pumo Technovation">
+
+<!--fav icon-->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icon/apple-touch-icon.png">
+<link rel="manifest" href="assets/fav-icon/site.webmanifest">
+
+<!-- Bootstrap CSS (preloaded for faster render) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- Swiper CSS -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!-- Main Styles -->
+<link rel="preload" href="css/style.css" as="style">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="css/responsive.css" as="style">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Fonts: Load only once + swap to reduce CLS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&family=Raleway:wght@400;700&family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
+
+<!-- Jivochat (async) -->
+<!--<script src="//code.jivosite.com/widget/oBTVBilA3n" async></script>-->
+
+ 
+
+<!-- Recaptcha (lazy-load only on pages where needed) -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let s = document.createElement("script");
+    s.src = "https://www.google.com/recaptcha/api.js";
+    s.async = true; s.defer = true;
+    document.body.appendChild(s);
+  });
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WT6G8PZW');
+</script>
+<!-- End Google Tag Manager -->
+    <title>Careers | Pumo Technovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-page: #f8f9fa;
+            --primary-navy: #0a192f;
+            --accent-yellow: #facc15;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --border-light: #e5e7eb;
+            --transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .openings-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 80px;
+        }
+
+        .openings-section-headder {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .openings-section-headder h1 {
+            text-shadow: 2px 2px #e0e0e0;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: rgb(255, 187, 0);
+            margin: 0;
+        }
+
+        .openings-section-headder p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* --- Optimized Grid Container --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .job-card-container {
+            perspective: 1000px;
+            height: 420px;
+            width: 100%;
+        }
+
+
+        @media (max-width: 1100px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .openings-section-headder h1 {
+                font-size: 1.8rem;
+            }
+
+            .openings-section-headder p {
+                font-size: 0.9rem;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+                width: 85%;
+                gap: 30px;
+            }
+
+            .job-card-container {
+                height: 400px;
+            }
+
+            .card-title {
+                font-size: 1.3rem !important;
+            }
+
+            .summary {
+                font-size: 0.8rem !important;
+            }
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: var(--transition);
+            transform-style: preserve-3d;
+        }
+
+        .card-inner.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #fff;
+            border-radius: 30px;
+            border: 1px solid var(--border-light);
+            padding: 25px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .face-front {
+            justify-content: space-between;
+            background-color: #ffb7002c;
+        }
+
+        .face-front:hover {
+
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        .badge {
+            background: #fffbeb;
+            color: #ffc800;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .summary {
+            color: var(--text-muted);
+            line-height: 1.4;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            flex-grow: 1;
+        }
+
+        .meta {
+            color: #8a7a00;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .job-btn-apply {
+            background: var(--primary-navy);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-flip {
+            background: transparent;
+            color: var(--text-muted);
+            border: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .btn-flip:hover {
+            color: rgb(166, 150, 8);
+        }
+
+        .job-btn-apply:hover {
+            background-color: #ffe100;
+            color: #000;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .face-back {
+            transform: rotateY(180deg);
+            background: #ffd000a8;
+            overflow: hidden;
+        }
+
+        .face-back h2 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--primary-navy);
+            font-weight: 700;
+        }
+
+        .face-back ul {
+            padding-left: 18px;
+            color: black;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin: 0;
+
+            overflow-y: auto;
+            max-height: 250px;
+        }
+
+        .face-back ul::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .face-back ul::-webkit-scrollbar-thumb {
+            background: #e6b800;
+            border-radius: 10px;
+        }
+
+        .btn-back {
+            background: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.75rem;
+            margin-top: 10px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 30px;
+            width: 92%;
+            max-width: 400px;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #9ca3af;
+            cursor: pointer;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .modal-header p {
+            color: #6b7280;
+            font-size: 0.65rem;
+            font-weight: 800;
+            margin: 4px 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            background: #fff;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            color: var(--text-main);
+            box-sizing: border-box;
+            font-size: 0.85rem;
+        }
+
+        .file-upload-wrapper {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            border: 1px dashed #d1d5db;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .file-upload-wrapper span {
+            color: #6b7280;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .file-upload-wrapper input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary-navy);
+            color: var(--accent-yellow);
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .pumo-banner-centered {
+            background-color: #ffffff;
+            min-height: 60vh;
+            border-bottom: 1px solid #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .pumo-label span {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #999;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .pumo-banner-centered h1 {
+            font-size: 3.5rem;
+            color: #1a1a1b;
+            line-height: 1.2;
+        }
+
+        .text-yellow {
+            color: #FFC107;
+        }
+
+        #cpage-about-layout {
+            padding: 80px 0;
+            background-color: #ffcc0084;
+            font-family: 'Lexend', sans-serif;
+            margin-bottom: 50px;
+        }
+
+        .cpage-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cpage-flex-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .cpage-image-col {
+            flex: 1;
+        }
+
+        .cpage-image-container {
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .cpage-feature-img {
+            width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .cpage-floating-card {
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            background: #F0B21C;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(240, 178, 28, 0.3);
+        }
+
+        .cpage-card-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1A1A1A;
+        }
+
+        .cpage-card-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1A1A1A;
+        }
+
+        .cpage-text-col {
+            flex: 1.2;
+        }
+
+        .cpage-tagline {
+            color: #F0B21C;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .cpage-heading {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1A1A1A;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .cpage-highlight {
+            color: #F0B21C;
+        }
+
+        .cpage-description {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .cpage-stats-grid {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .cpage-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: #1A1A1A;
+            font-size: 0.95rem;
+        }
+
+        .cpage-stat-item i {
+            color: #F0B21C;
+        }
+
+        .cpage-primary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #1A1A1A;
+            color: #F0B21C;
+            padding: 15px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .cpage-flex-row {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .cpage-heading {
+                font-size: 1.5rem !important;
+            }
+
+            .cpage-description,
+            .cpage-stat-item,
+            .cpage-card-label {
+                font-size: 0.8rem !important;
+            }
+
+            .cpage-image-container {
+                padding-right: 0;
+            }
+
+            .cpage-floating-card {
+                right: 50%;
+                transform: translateX(50%);
+                bottom: -15px;
+                padding: 15px 25px;
+            }
+
+            .cpage-stats-grid {
+                justify-content: center;
+            }
+
+            .pumo-banner-centered h1 {
+                font-size: 1.5rem !important;
+            }
+
+            .pumo-banner-centered p {
+                margin-left: 10px;
+                margin-right: 10px;
+                font-size: 0.8rem;
+            }
+
+        }
+
+        .career-apply-anyway-wrapper {
+            padding: 80px 20px;
+            background-color: #ffbd0883;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .career-label-tag {
+            background: #fffbeb;
+            color: #facc15;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .career-main-heading {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #111827;
+            margin: 0 0 15px 0;
+        }
+
+        .career-heading-highlight {
+            color: #facc15;
+        }
+
+        .career-subtext-para {
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .career-form-card-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #f3f4f6;
+            border-radius: 40px;
+            padding: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .career-form-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .career-form-group-item {
+            margin-bottom: 25px;
+        }
+
+        .career-common-form-label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .career-common-input-field {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: #111827;
+            box-sizing: border-box;
+            background-color: #fafafa;
+            transition: 0.3s ease;
+        }
+
+        .career-common-input-field:focus {
+            outline: none;
+            border-color: #facc15;
+            background-color: #fff;
+        }
+
+        .career-upload-dropzone {
+            border: 2px dashed #facc15;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .career-upload-dropzone:hover {
+            background-color: #fffbeb;
+        }
+
+        .career-upload-text {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #111827;
+        }
+
+        .career-upload-highlight {
+            color: #facc15;
+            font-weight: 700;
+        }
+
+        .career-file-specs {
+            display: block;
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 8px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .career-hidden-file-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .career-submit-button-primary {
+            width: 100%;
+            background-color: #1a1a1a;
+            color: #facc15;
+            border: none;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .career-submit-button-primary:hover {
+            background-color: #000;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .career-apply-anyway-wrapper {
+                padding: 50px 15px;
+            }
+
+            .career-main-heading {
+                font-size: 1.5rem !important;
+            }
+
+            .career-subtext-para,
+            .career-common-form-label,
+            .career-common-input-field,
+            .career-upload-text,
+            .career-submit-button-primary {
+                font-size: 0.75rem !important;
+            }
+
+            .career-form-card-container {
+                padding: 25px;
+                border-radius: 25px;
+            }
+
+            .career-form-grid-layout {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .career-upload-dropzone {
+                padding: 25px 15px;
+            }
+
+            .career-submit-button-primary {
+                padding: 15px;
+            }
+        }
+        
+        .openings-section{
+
+padding:60px 0;
+background:#f8f8f8;
+
+}
+
+.openings-section-headder{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+.openings-section-headder h1{
+
+font-weight:700;
+color:#0d1b2a;
+
+}
+
+/* card */
+.career-card{
+
+background:#ffedc6;
+padding:30px;
+border-radius:20px;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+}
+
+.career-role{
+
+font-size:26px;
+font-weight:700;
+color:#0b1c34;
+
+}
+
+.career-location{
+
+color:#9f8700;
+font-weight:600;
+margin-bottom:20px;
+
+}
+
+.career-info{
+
+font-size:14px;
+margin-bottom:20px;
+
+}
+
+/* button */
+.career-btn{
+
+background:#071a2f;
+color:white;
+padding:15px;
+border:none;
+border-radius:15px;
+font-weight:600;
+width:100%;
+
+}
+
+/* modal */
+.modal-content{
+
+border-radius:15px;
+
+}
+
+.modal-title{
+
+font-weight:700;
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header id="siteHeader">
+        <div class="topbar">
+            <div class="container topbar__inner">
+                <div class="topbar__left">
+                    <a href="tel:+918904708555"><i class="bi bi-telephone-fill"></i> +91 89047 08555</a>
+                    <a href="mailto:info@pumotechnovation.com"><i class="bi bi-envelope-fill"></i> info@pumotechnovation.com</a>
+                </div>
+                <div class="topbar__right">
+                    <span class="topbar__badge"><i class="bi bi-megaphone-fill"></i> Admissions Open 2026</span>
+                    <span class="topbar__global"><i class="bi bi-geo-alt-fill"></i> Marathahalli, Bengaluru, Karnataka</span>
+                    <span class="topbar__social">
+                        <a href="https://wa.me/+918904708555" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://in.linkedin.com/company/pumo-technovation-india-private-limited" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <nav class="nav_bar">
+            <div class="container nav_bar__inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <img loading="lazy" src="assets/logo/pumo-technovation-logo.webp" alt="pumo technovation logo">
+                    </a>
+                </div>
+                <ul class="nav-list desktop-nav">
+                    <li class="nav-list-item"><a href="index.html" class="menu_link active">Home</a></li>
+                    <li class="nav-list-item"><a href="about.html" class="menu_link">About</a></li>
+                    <li class="nav-list-item has-dropdown">
+                        <a href="courses.html" class="menu_link">IT Courses <i class="bi bi-chevron-down"></i></a>
+                        <div class="nav-dropdown">
+                            <div class="nav-dropdown__grid">
+                                <a href="courses.html" class="nav-dropdown__link"><i class="bi bi-code-slash"></i><span>Web Development</span></a>
+                                <a href="courses.html" class="nav-dropdown__link"><i class="bi bi-cpu"></i><span>AI &amp; Machine Learning</span></a>
+                                <a href="courses.html" class="nav-dropdown__link"><i class="bi bi-cloud-check"></i><span>Cloud &amp; DevOps</span></a>
+                                <a href="courses.html" class="nav-dropdown__link"><i class="bi bi-shield-check"></i><span>Cybersecurity</span></a>
+                                <a href="courses.html" class="nav-dropdown__link"><i class="bi bi-phone"></i><span>Mobile App Development</span></a>
+                                <a href="courses.html" class="nav-dropdown__link"><i class="bi bi-graph-up-arrow"></i><span>Data Science &amp; Analytics</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-list-item"><a href="placement.html" class="menu_link">Placement</a></li>
+                    <li class="nav-list-item"><a href="blog.html" class="menu_link">Blog</a></li>
+                    <li class="nav-list-item"><a href="careers.html" class="menu_link">Careers</a></li>
+                    <li class="nav-list-item"><a href="contact.html" class="menu_link">Contact Us</a></li>
+                </ul>
+                <div class="nav_bar__actions">
+                    <a href="#staticBackdrop" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi bi-rocket-takeoff"></i> Enroll Now
+                    </a>
+                    <div class="toggle-menu" id="toggleMenu">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="scroll-progress" id="scrollProgress"></div>
+        <div class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav__brand">
+                <img src="assets/logo/pumo-technovation-logo.webp" alt="Pumo Technovation">
+                <button type="button" class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="index.html" class="menu_link">Home</a></li>
+                <li class="nav-list-item"><a href="about.html" class="menu_link">About</a></li>
+                <li class="nav-list-item"><a href="courses.html" class="menu_link">IT Courses</a></li>
+                <li class="nav-list-item"><a href="courses.html" class="menu_link sub">Web Development</a></li>
+                <li class="nav-list-item"><a href="courses.html" class="menu_link sub">AI &amp; Machine Learning</a></li>
+                <li class="nav-list-item"><a href="courses.html" class="menu_link sub">Cloud &amp; DevOps</a></li>
+                <li class="nav-list-item"><a href="courses.html" class="menu_link sub">Cybersecurity</a></li>
+                <li class="nav-list-item"><a href="placement.html" class="menu_link">Placement</a></li>
+                <li class="nav-list-item"><a href="blog.html" class="menu_link">Blog</a></li>
+                <li class="nav-list-item"><a href="careers.html" class="menu_link">Careers</a></li>
+                <li class="nav-list-item"><a href="contact.html" class="menu_link">Contact Us</a></li>
+            </ul>
+            <div class="mobile-nav__contact">
+                <a href="tel:+918904708555"><i class="bi bi-telephone-fill"></i> +91 89047 08555</a>
+                <a href="mailto:info@pumotechnovation.com"><i class="bi bi-envelope-fill"></i> info@pumotechnovation.com</a>
+            </div>
+            <div class="mobile-nav__social">
+                <a href="https://wa.me/+918904708555" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://in.linkedin.com/company/pumo-technovation-india-private-limited" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+            <a href="#staticBackdrop" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enroll Now</a>
+        </div>
+    </header>
+
+<script>
+    var toggleButton = document.querySelector('#toggleMenu');
+    var mobileNav = document.querySelector('#mobileNav');
+    var siteHeader = document.querySelector('#siteHeader');
+    var scrollProgress = document.querySelector('#scrollProgress');
+    var mobileNavClose = document.querySelector('#mobileNavClose');
+    toggleButton.addEventListener('click', function () {
+        mobileNav.classList.toggle('open');
+        toggleButton.classList.toggle('active');
+    });
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', function () {
+            mobileNav.classList.remove('open');
+            toggleButton.classList.remove('active');
+        });
+    }
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 40) { siteHeader.classList.add('scrolled'); }
+        else { siteHeader.classList.remove('scrolled'); }
+        if (scrollProgress) {
+            var doc = document.documentElement;
+            var total = doc.scrollHeight - doc.clientHeight;
+            var pct = total > 0 ? (window.scrollY / total) * 100 : 0;
+            scrollProgress.style.width = pct + '%';
+        }
+    });
+</script>    
+    <section class="pumo-banner-centered d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="pumo-label mb-3">
+                        <span>ESTABLISHED EXCELLENCE â€¢ PUMO TECHNOVATION</span>
+                    </div>
+                    <h1 class="fw-bold mb-4">
+                        Shape the Future of <span class="text-yellow">Industrial Excellence</span> <br>
+                        with Pumo Technovation
+                    </h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p class=" mb-5">
+                                Join India's premier Advanced Technical Campus. We are a high-octane ecosystem bridging
+                                the gap between elite engineering and global manufacturing standards for leaders like
+                                Hyundai and Ashok Leyland.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cpage-about-layout" class="cpage-section">
+        <div class="cpage-container">
+            <div class="cpage-flex-row">
+                <div class="cpage-image-col">
+                    <div class="cpage-image-container">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80"
+                            alt="Pumo Tech Environment" class="cpage-feature-img">
+                        <div class="cpage-floating-card">
+                            <span class="cpage-card-number">20+</span>
+                            <span class="cpage-card-label">Years Legacy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cpage-text-col">
+                    <div class="cpage-content-wrapper">
+                        <span class="cpage-tagline">JOIN OUR TEAM</span>
+                        <h2 class="cpage-heading">Empowering the Next Generation of <span class="cpage-highlight">Tech
+                                Talent</span></h2>
+                        <p class="cpage-description">
+                            Pumo Technovation is a multi-vertical ecosystem focused on eradicating the technical skill
+                            gap. From industrial design to MERN stack development, we provide a high-octane environment
+                            for creators and innovators.
+                        </p>
+                        <div class="cpage-stats-grid">
+                            <div class="cpage-stat-item"><i class="fas fa-check-circle"></i><span>Industry-Led
+                                    Projects</span></div>
+                            <div class="cpage-stat-item"><i class="fas fa-check-circle"></i><span>Global
+                                    Standards</span></div>
+                        </div>
+                        <a href="#openings" class="cpage-primary-btn">See Openings <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPENINGS -->
+    <section class="openings-section">
+
+        <div class="container">
+
+            <div class="openings-section-headder">
+
+                <h1>Join the Collective</h1>
+                <p>Explore open positions</p>
+
+            </div>
+
+
+            <div class="row g-4">
+                <!-- CARD 1 -->
+                <div class="col-lg-4">
+                    <div class="career-card">
+                        <div>
+                            <h4 class="career-role">Digital Marketing Executive</h4>
+                            <p class="career-location">Marathahalli, Bengaluru</p>
+                            <div class="career-info">
+                                <p><strong>Qualification :</strong> Any Degree</p>
+
+                                <p><strong>Experience :</strong> 0-2 Years</p>
+
+                                <p><strong>Tools :</strong> SEO, Ads, Google ads, Meta Ads</p>
+
+                                <p><strong>Skills :</strong> Campaign, Content</p>
+
+                            </div>
+
+                        </div>
+
+                        <button class="career-btn" data-bs-toggle="modal" data-bs-target="#applyModal">
+
+                            Apply for this Role
+
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="career-card">
+                        <div>
+                            <h4 class="career-role">Civil Trainer</h4>
+
+                            <p class="career-location">Marathahalli, Bengaluru</p>
+
+                            <div class="career-info">
+
+                                <p><strong>Qualification :</strong> B.Tech, B.E - Civil Engineer</p>
+
+                                <p><strong>Experience :</strong> 1-3 Years</p>
+
+                                <p><strong>Tools :</strong> Tekla Structures, Civil 3D, SketchUp</p>
+
+                                <p><strong>Skills :</strong> AutoCAD, Revit, BIM, STAAD Pro</p>
+
+                            </div>
+
+                        </div>
+
+                        <button class="career-btn" data-bs-toggle="modal" data-bs-target="#applyModal">
+
+                            Apply for this Role
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="career-card">
+
+                        <div>
+
+                            <h4 class="career-role">Civil Trainer</h4>
+
+                            <p class="career-location">Marathahalli, Bengaluru</p>
+
+                            <div class="career-info">
+
+                                <p><strong>Qualification :</strong> B.Tech, B.E - Civil Engineer</p>
+
+                                <p><strong>Experience :</strong> 1-3 Years</p>
+
+                                <p><strong>Tools :</strong> Tekla Structures, Civil 3D, SketchUp</p>
+
+                                <p><strong>Skills :</strong> AutoCAD, Revit, BIM, STAAD Pro</p>
+
+                            </div>
+
+                        </div>
+
+                        <button class="career-btn" data-bs-toggle="modal" data-bs-target="#applyModal">
+
+                            Apply for this Role
+
+                        </button>
+
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="career-card">
+                        <div>
+                            <h4 class="career-role">SAP Trainer</h4>
+
+                            <p class="career-location">Marathahalli, Bengaluru</p>
+
+                            <div class="career-info">
+
+                                <p><strong>Qualification :</strong> Any Degree</p>
+
+                                <p><strong>Experience :</strong> 1-3 Years</p>
+
+                                <p><strong>Tools :</strong> Any Degree with certified with SAP FICO, MM, ABAP</p>
+
+                                <p><strong>Skills :</strong> Analytical thinking, good communications skills</p>
+
+                            </div>
+
+                        </div>
+
+                        <button class="career-btn" data-bs-toggle="modal" data-bs-target="#applyModal">
+
+                            Apply for this Role
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="career-card">
+
+                        <div>
+
+                            <h4 class="career-role">EMBEDDED Trainer</h4>
+
+                            <p class="career-location">Marathahalli, Bengaluru</p>
+
+                            <div class="career-info">
+
+                                <p><strong>Qualification:</strong> B.E. / B.TECH - EEE, ECE, Embedded Systems, Instrumentation</p>
+
+                                <p><strong>Experience:</strong> 1-3 Years</p>
+
+                                <p><strong>Tools:</strong> Embedded C, ARM Cortex, Arduino</p>
+
+                                <p><strong>Skills:</strong> Embedded C Programming, Firmware Development, Interfacing Sensors & Actuators</p>
+
+                            </div>
+
+                        </div>
+
+                        <button class="career-btn" data-bs-toggle="modal" data-bs-target="#applyModal">
+
+                            Apply for this Role
+
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="applyModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Apply for Job</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form id="careerForm" name="google-sheet"
+                        action="https://script.google.com/macros/s/AKfycbxSsm-FeWjoYl7dY25ovNdwL8hQQidgzgqve28cf6_fr9Uazx-cnJl8L6kA2ScIFY-0/exec">
+                    <div class="modal-body">
+                        <input type="text" class="form-control mb-3" name="Name" placeholder="Full Name" required>
+
+                        <input type="email" class="form-control mb-3" name="Email" placeholder="Email Address" required>
+
+                        <input type="tel" class="form-control mb-3" name="Phone Number" placeholder="Phone Number" required>
+
+                        <input type="text" class="form-control mb-3" name="Qualification" placeholder="Qualification">
+
+                        <input type="text" class="form-control mb-3" name="Experience" placeholder="Experience">
+                        
+                        <input type="text" class="form-control mb-3" name="Position" placeholder="Apply for Position">
+
+                        <select name="Location" class="form-select mb-3">
+                                                   <option value="" selected disabled>Preferred Location</option>
+                                                   <option>Marathahalli</option>
+                                                   
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="submitBtn" class="career-btn" type="submit">
+                            <span class="btn--submit">Submit Application</span>
+                            <div class="btn--submitting d-none">
+                                Submitting.....</div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- APPLY ANYWAY -->
+    <section class="career-apply-anyway-wrapper">
+
+        <div class="career-label-tag">
+            Join the Collective
+        </div>
+
+        <h2 class="career-main-heading">
+            Don't See Your Role?
+            <span class="career-heading-highlight">Apply Anyway</span>
+        </h2>
+
+        <p class="career-subtext-para">
+            Send your details and we will find the right role for you.
+        </p>
+
+
+
+        <div class="career-form-card-container">
+            <form id="careerCommonForm" name="google-sheet"
+                        action="https://script.google.com/macros/s/AKfycbyt2c3RtIUpiPXV0j2dVsySjDBOlSi9vTC7bUFATfjcUgRa8C4UCwsoTXztG2IZNals/exec">
+
+                <div class="career-form-grid-layout">
+                    <div class="career-form-group-item">
+                        <label class="career-common-form-label">Full Name *</label>
+                        <input type="text" name="Name" class="career-common-input-field" required>
+                    </div>
+
+                    <div class="career-form-group-item">
+                        <label class="career-common-form-label">Email *</label>
+                        <input type="email" name="Email" class="career-common-input-field" required>
+                    </div>
+                </div>
+
+                <div class="career-form-group-item">
+                    <label class="career-common-form-label">Phone *</label>
+                    <input type="tel" name="Phone Number" class="career-common-input-field" required>
+                </div>
+
+                <div class="career-form-group-item">
+                    <label class="career-common-form-label">Qualification *</label>
+                    <input type="text" name="Qualification" class="career-common-input-field" required>
+                </div>
+
+                <div class="career-form-group-item">
+                    <label class="career-common-form-label">Experience *</label>
+                    <input type="text" name="Experience" class="career-common-input-field" required>
+                </div>
+
+                <div class="career-form-group-item">
+                    <label class="career-common-form-label">Apply for Position *</label>
+                    <input type="text" name="Position" class="career-common-input-field" required>
+                </div>
+
+                <div class="career-form-group-item">
+                    <label class="career-common-form-label">Preferred Location *</label>
+
+                    <select name="Location" class="career-common-input-field" required>
+                                                                     <option value="" selected disabled>Preferred Location</option>
+                                                                     <option>Marathahalli</option>
+                                                                     
+                </div>
+
+                <button type="submit" id="submitBtn" class="career-submit-button-primary btn-submit">
+                    <span class="btn--submit">Submit Application</span>
+                            <div class="btn--submitting d-none">
+                                Submitting.....</div>
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+<footer>
+<section class="footer_modern">
+    <div class="container">
+        <div class="row footer_top">
+            <div class="col-lg-4 col-md-6 footer_col footer_brand">
+                <div class="footer_logo_box">
+                    <img src="assets/logo/pumo-technovation-logo.webp" alt="Pumo Technovation">
+                </div>
+                <p>India's premier IT training &amp; software solutions company &mdash; full-stack development, AI/ML, cloud, and cybersecurity with real-project training and placement support.</p>
+                <div class="footer_social">
+                    <a href="https://wa.me/+917305635666" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://in.linkedin.com/company/pumo-technovation-india-private-limited" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 footer_col">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">IT Courses</a></li>
+                    <li><a href="placement.html">Placement</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer_col">
+                <h5>IT Courses</h5>
+                <ul>
+                    <li><a href="courses.html">Full Stack Web Development</a></li>
+                    <li><a href="courses.html">AI &amp; Machine Learning</a></li>
+                    <li><a href="courses.html">Data Science &amp; Analytics</a></li>
+                    <li><a href="courses.html">Cloud &amp; DevOps</a></li>
+                    <li><a href="courses.html">Cybersecurity</a></li>
+                    <li><a href="courses.html">Mobile App Development</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer_col">
+                <h5>Get In Touch</h5>
+                <ul class="footer_contact">
+                    <li><i class="bi bi-geo-alt-fill"></i> SY. NO 88, Marathahalli - Sarjapur Outer Ring Rd, opposite More Megastore, Marathahalli, Bengaluru, Karnataka 560037</li>
+                    <li><i class="bi bi-telephone-fill"></i> <a href="tel:+918904708555">+91 89047 08555</a></li>
+                    <li><i class="bi bi-envelope-fill"></i> <a href="mailto:info@pumotechnovation.com">info@pumotechnovation.com</a></li>
+                </ul>
+                <h5 class="footer_newsletter_title">Newsletter</h5>
+                <form class="footer_newsletter" onsubmit="return false;">
+                    <input type="email" placeholder="Your email address" aria-label="Email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="bi bi-send-fill"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer_branches">
+            <span class="footer_branches__label"><i class="bi bi-building"></i> Our Branch:</span>
+            <span class="footer_branches__list">Marathahalli, Bengaluru, Karnataka</span>
+            <a href="our-branches-and-courses.html" class="footer_branches__link">Courses at Marathahalli <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="container footer_bottom__inner">
+            <p>&copy; 2026 Pumo Technovation India Pvt Ltd &mdash; All Rights Reserved</p>
+            <ul>
+                <li><a href="terms-and-conditions.html">Terms</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="refund-policy.html">Refund</a></li>
+                <li><a href="cancellation-policy.html">Cancellation</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="floating_icon">
+    <div class="chatbot-widget">
+        <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="Chat with Pumo Assistant">
+            <div class="chatbot-header">
+                <div class="chatbot-header__info">
+                    <div class="chatbot-avatar"><i class="bi bi-robot"></i></div>
+                    <div>
+                        <p class="chatbot-name">Pumo Assistant</p>
+                        <p class="chatbot-status"><span class="chatbot-online-dot"></span> Online &middot; replies instantly</p>
+                    </div>
+                </div>
+                <button type="button" class="chatbot-close" id="chatbotClose" aria-label="Close chat"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-quick" id="chatbotQuick">
+                <button type="button" data-q="courses">Courses</button>
+                <button type="button" data-q="duration">Duration</button>
+                <button type="button" data-q="fees">Fees</button>
+                <button type="button" data-q="placement">Placement</button>
+                <button type="button" data-q="location">Location</button>
+            </div>
+            <form class="chatbot-input" id="chatbotForm">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off">
+                <button type="submit" aria-label="Send"><i class="bi bi-send-fill"></i></button>
+            </form>
+        </div>
+        <button type="button" class="chat-float" id="chatbotToggle" aria-label="Open chat">
+            <i class="bi bi-chat-dots-fill"></i>
+        </button>
+    </div>
+</section>
+
+<script>
+(function () {
+    var E_WAVE = String.fromCodePoint(0x1F44B);
+    var E_PHONE = String.fromCodePoint(0x1F4DE);
+    var E_SMILE = String.fromCodePoint(0x1F60A);
+    var BULLET = String.fromCodePoint(0x2022);
+    var toggler = document.getElementById('chatbotToggle');
+    var win = document.getElementById('chatbotWindow');
+    var closer = document.getElementById('chatbotClose');
+    var messages = document.getElementById('chatbotMessages');
+    var form = document.getElementById('chatbotForm');
+    var input = document.getElementById('chatbotInput');
+    var quick = document.getElementById('chatbotQuick');
+    if (!toggler || !win) return;
+
+    var faqs = [
+        { keys: ['course', 'courses', 'training', 'learn', 'study', 'track', 'tracks', 'web', 'ai ', 'cloud', 'cyber', 'data science', 'mobile app', 'program', 'programs'], reply: 'We offer 6 industry-ready IT tracks at our Marathahalli campus:\n\n' + BULLET + ' Web Development (Full Stack)\n' + BULLET + ' AI & Machine Learning\n' + BULLET + ' Cloud & DevOps\n' + BULLET + ' Cybersecurity\n' + BULLET + ' Mobile App Development\n' + BULLET + ' Data Science & Analytics\n\nWhich one interests you?' },
+        { keys: ['duration', 'how long', 'months', 'weeks', 'time period', 'batch'], reply: 'Most of our courses run 4-6 months, with weekday and weekend batches - plus fast-track options for working professionals.' },
+        { keys: ['fee', 'fees', 'price', 'cost', 'discount', 'offer', 'offers', 'pay', 'charge', 'installment'], reply: 'Fees vary by track. Share your mobile number here and our counselor will send you the exact fee structure plus the current admission offer.' },
+        { keys: ['placement', 'job', 'jobs', 'career', 'interview', 'hire', 'salary', 'package', 'placed'], reply: 'We provide 100% placement support - mock interviews, resume building, soft-skill training and weekly recruitment drives with top IT companies.' },
+        { keys: ['location', 'address', 'where', 'branch', 'map', 'reach', 'direction', 'marathahalli', 'bengaluru', 'bangalore'], reply: 'We are at SY. NO 88, Marathahalli - Sarjapur Outer Ring Rd, opposite More Megastore, Marathahalli, Bengaluru - 560037.\nCall: +91 89047 08555' },
+        { keys: ['contact', 'phone', 'number', 'mobile', 'email', 'call', 'talk', 'human', 'counselor', 'counsellor', 'agent', 'speak'], reply: 'You can reach our counselors at +91 89047 08555 or info@pumotechnovation.com - or type your mobile number here and we will call you back.' },
+        { keys: ['demo', 'trial', 'sample class'], reply: 'Yes! We offer free demo classes. Type your mobile number here and we will book your slot.' },
+        { keys: ['hi', 'hello', 'hey', 'namaste', 'good morning', 'good evening', 'good afternoon'], reply: 'Hi there! ' + E_WAVE + ' Welcome to Pumo Technovation. Ask me about courses, fees, duration, placement or location - or share your number for a callback.' },
+        { keys: ['thank', 'thanks', 'ok', 'okay', 'nice', 'great', 'awesome', 'cool'], reply: 'You are welcome! ' + E_SMILE + ' Anything else I can help with?' }
+    ];
+
+    function getReply(text) {
+        var t = (' ' + text.toLowerCase() + ' ');
+        for (var i = 0; i < faqs.length; i++) {
+            for (var j = 0; j < faqs[i].keys.length; j++) {
+                if (t.indexOf(faqs[i].keys[j]) !== -1) return faqs[i].reply;
+            }
+        }
+        if (/[6-9]\d{9}/.test(text.replace(/\s/g, ''))) {
+            return 'Thank you! ' + E_PHONE + ' Our counselor will call you within 30 minutes (Mon-Sat, 9 AM-9 PM). Meanwhile, ask me anything else!';
+        }
+        return 'Thanks for your message! I can help with courses, fees, duration, placement and location - or type your mobile number and we will call you back.';
+    }
+
+    function addMessage(text, who) {
+        var row = document.createElement('div');
+        row.className = 'chatbot-msg ' + (who === 'bot' ? 'bot' : 'user');
+        if (who === 'bot') {
+            var av = document.createElement('div');
+            av.className = 'chatbot-msg__avatar';
+            av.innerHTML = '<i class="bi bi-robot"></i>';
+            row.appendChild(av);
+        }
+        var bubble = document.createElement('div');
+        bubble.className = 'chatbot-msg__bubble';
+        bubble.textContent = text;
+        row.appendChild(bubble);
+        messages.appendChild(row);
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    function botReply(text) {
+        addMessage(text, 'user');
+        var typing = document.createElement('div');
+        typing.className = 'chatbot-msg bot chatbot-typing';
+        typing.innerHTML = '<div class="chatbot-msg__avatar"><i class="bi bi-robot"></i></div><div class="chatbot-msg__bubble"><span></span><span></span><span></span></div>';
+        messages.appendChild(typing);
+        messages.scrollTop = messages.scrollHeight;
+        setTimeout(function () {
+            typing.remove();
+            addMessage(getReply(text), 'bot');
+        }, 700 + Math.random() * 500);
+    }
+
+    function sendText(text) {
+        text = (text || '').trim();
+        if (!text) return;
+        input.value = '';
+        botReply(text);
+    }
+
+    toggler.addEventListener('click', function () {
+        win.classList.toggle('open');
+        toggler.classList.toggle('hidden');
+    });
+    if (closer) {
+        closer.addEventListener('click', function () {
+            win.classList.remove('open');
+            toggler.classList.remove('hidden');
+        });
+    }
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        sendText(input.value);
+    });
+    quick.addEventListener('click', function (e) {
+        var btn = e.target.closest('button[data-q]');
+        if (!btn) return;
+        sendText(btn.getAttribute('data-q'));
+    });
+    addMessage('Hi! ' + E_WAVE + ' I am Pumo Assistant - your guide to IT courses at Pumo Technovation, Marathahalli. Ask me anything or pick a quick question below!', 'bot');
+})();
+</script>
+
+</footer>
+
+</body>
+
+  <!-- bootstrap cdn -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- swiper cdn -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                660: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+        });
+    }
+
+    // Initialize Swipers for each slider type
+    initializeSwiper(".mechSwiper");
+    initializeSwiper(".autoSwiper");
+    initializeSwiper(".DevSwiper");
+    initializeSwiper(".civilSwiper");
+    initializeSwiper(".sapSwiper");
+    initializeSwiper(".aeroSwiper");
+    initializeSwiper(".placementSwiper");
+</script>
+
+<script>
+    var swiper = new Swiper(".moduleSwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var trendingCourseSwiper = new Swiper(".trendingSwiper", {
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            660: {
+                slidesPerView: 1.2,
+            },
+            1200: {
+                slidesPerView: 2.5,
+            }
+        },
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var TechPartner = new Swiper(".techPartnerSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<script>
+    function initializeSwiperCourses(className) {
+        return new Swiper(className, {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                660: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+
+    // Initialize Swipers for each slider type
+    initializeSwiperCourses(".mechCourse");
+    initializeSwiperCourses(".electCourse");
+    initializeSwiperCourses(".itCourse");
+    initializeSwiperCourses(".civilCourse");
+    initializeSwiperCourses(".sapCourse");
+    initializeSwiperCourses(".aeroCourse");
+</script>
+
+<script>
+    var homeGrid = new Swiper(".homeGridSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.accordion-item h5').forEach((accordionToggle) => {
+        accordionToggle.addEventListener('click', () => {
+            const accordionItem = accordionToggle.parentNode;
+            const accordionContent = accordionToggle.nextElementSibling;
+
+            if (accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = null;
+                accordionItem.classList.remove('active');
+            } else {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                accordionItem.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".missionSwiper", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+<script>
+    var swiperCbe = new Swiper(".cbeSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+
+            },
+            660: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            }
+        }
+    });
+</script>
+
+<script>
+    var ServiceSwiper = new Swiper(".serviceSwiper", {
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            660: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 2.5,
+            }
+        },
+        spaceBetween: 5,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".ourSisCompanies", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".formSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+
+    });
+</script>
+
+<script>
+    function changeBranch() {
+        var selectedBranch = document.getElementById("branchDropdown").value;
+        var tabs = document.querySelectorAll('.tab-pane');
+
+        // Hide all tabs
+        tabs.forEach(function(tab) {
+            tab.classList.remove('show', 'active');
+        });
+
+        // Show the selected tab
+        var selectedTab = document.querySelector(selectedBranch);
+        selectedTab.classList.add('show', 'active');
+    }
+</script>
+
+<!-- landing page script -->
+<script>
+    var swiper = new Swiper(".formSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            freeMode: true,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: { // Ensure it applies to all smaller screens
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                660: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 30,
+                }
+            },
+        });
+    }
+
+    initializeSwiper(".partnershipSwiper");
+    initializeSwiper(".vectorSwiper");
+</script>
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            freeMode: true,
+            breakpoints: {
+                0: { // Ensure it applies to all smaller screens
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                    loop: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    },
+                },
+                660: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    loop: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    },
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            },
+        });
+    }
+    initializeSwiper(".sisCompanySwiper");
+</script>
+
+<script>
+    var swiper = new Swiper(".homeSwiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2800,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".flagSwiper", {
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 2.8,
+                spaceBetween: 30,
+            },
+            660: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+            },
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    var testimonialSwiper = new Swiper(".testiSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        spaceBetween: 30,
+        breakpoints: {
+            600: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 3.5,
+            },
+        }
+    });
+</script>
+
+<script>
+    var staffingSolution = new Swiper(".staffSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            600: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        }
+    });
+</script>
+
+<script>
+    var staffingSolution = new Swiper(".engineeringSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            600: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".mechPlacementSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                660: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+        });
+    }
+
+    // Initialize Swipers for each slider type
+    initializeSwiper(".mechSwiper");
+    initializeSwiper(".autoSwiper");
+    initializeSwiper(".DevSwiper");
+    initializeSwiper(".civilSwiper");
+    initializeSwiper(".sapSwiper");
+    initializeSwiper(".aeroSwiper");
+    initializeSwiper(".placementSwiper");
+</script>
+
+<script>
+    var swiper = new Swiper(".moduleSwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var trendingCourseSwiper = new Swiper(".trendingSwiper", {
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            660: {
+                slidesPerView: 1.2,
+            },
+            1200: {
+                slidesPerView: 2.5,
+            }
+        },
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var TechPartner = new Swiper(".techPartnerSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<script>
+    function initializeSwiperCourses(className) {
+        return new Swiper(className, {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                660: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+
+    // Initialize Swipers for each slider type
+    initializeSwiperCourses(".mechCourse");
+    initializeSwiperCourses(".electCourse");
+    initializeSwiperCourses(".itCourse");
+    initializeSwiperCourses(".civilCourse");
+    initializeSwiperCourses(".sapCourse");
+    initializeSwiperCourses(".aeroCourse");
+</script>
+
+<script>
+    var homeGrid = new Swiper(".homeGridSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.accordion-item h5').forEach((accordionToggle) => {
+        accordionToggle.addEventListener('click', () => {
+            const accordionItem = accordionToggle.parentNode;
+            const accordionContent = accordionToggle.nextElementSibling;
+
+            if (accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = null;
+                accordionItem.classList.remove('active');
+            } else {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                accordionItem.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".missionSwiper", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+<script>
+    var swiperCbe = new Swiper(".cbeSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+
+            },
+            660: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            }
+        }
+    });
+</script>
+
+<script>
+    var ServiceSwiper = new Swiper(".serviceSwiper", {
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            660: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 2.5,
+            }
+        },
+        spaceBetween: 5,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".ourSisCompanies", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".formSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+
+    });
+</script>
+
+<script>
+    function changeBranch() {
+        var selectedBranch = document.getElementById("branchDropdown").value;
+        var tabs = document.querySelectorAll('.tab-pane');
+
+        // Hide all tabs
+        tabs.forEach(function(tab) {
+            tab.classList.remove('show', 'active');
+        });
+
+        // Show the selected tab
+        var selectedTab = document.querySelector(selectedBranch);
+        selectedTab.classList.add('show', 'active');
+    }
+</script>
+
+<!-- landing page script -->
+<script>
+    var swiper = new Swiper(".formSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            freeMode: true,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: { // Ensure it applies to all smaller screens
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                660: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 30,
+                }
+            },
+        });
+    }
+
+    initializeSwiper(".partnershipSwiper");
+    initializeSwiper(".vectorSwiper");
+</script>
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            freeMode: true,
+            breakpoints: {
+                0: { // Ensure it applies to all smaller screens
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                    loop: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    },
+                },
+                660: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    loop: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    },
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            },
+        });
+    }
+    initializeSwiper(".sisCompanySwiper");
+</script>
+
+<script>
+    var swiper = new Swiper(".homeSwiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2800,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    var staffingSolution = new Swiper(".staffSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            600: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        }
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".mechPlacementSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<script>
+    var swiperMechCampus = new Swiper(".mech_campus_drive", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        }
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".infraSwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction: 'vertical',
+        loop: true,
+    });
+    var swiper2 = new Swiper(".infraSwiper2", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    var MblInfraSwiper = new Swiper(".mblInfraSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                660: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: false,
+        });
+    }
+
+    // Initialize Swipers for each slider type
+    initializeSwiper(".mechSwiper");
+    initializeSwiper(".autoSwiper");
+    initializeSwiper(".DevSwiper");
+    initializeSwiper(".civilSwiper");
+    initializeSwiper(".sapSwiper");
+    initializeSwiper(".aeroSwiper");
+    initializeSwiper(".placementSwiper");
+</script>
+
+<script>
+    var swiper = new Swiper(".moduleSwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var trendingCourseSwiper = new Swiper(".trendingSwiper", {
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            660: {
+                slidesPerView: 1.2,
+            },
+            1200: {
+                slidesPerView: 2.5,
+            }
+        },
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var TechPartner = new Swiper(".techPartnerSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<script>
+    function initializeSwiperCourses(className) {
+        return new Swiper(className, {
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                660: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+
+    // Initialize Swipers for each slider type
+    initializeSwiperCourses(".mechCourse");
+    initializeSwiperCourses(".electCourse");
+    initializeSwiperCourses(".itCourse");
+    initializeSwiperCourses(".civilCourse");
+    initializeSwiperCourses(".sapCourse");
+    initializeSwiperCourses(".aeroCourse");
+</script>
+
+<script>
+    var homeGrid = new Swiper(".homeGridSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.accordion-item h5').forEach((accordionToggle) => {
+        accordionToggle.addEventListener('click', () => {
+            const accordionItem = accordionToggle.parentNode;
+            const accordionContent = accordionToggle.nextElementSibling;
+
+            if (accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = null;
+                accordionItem.classList.remove('active');
+            } else {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                accordionItem.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".missionSwiper", {
+        direction: "vertical",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+<script>
+    var swiperCbe = new Swiper(".cbeSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+
+            },
+            660: {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+            },
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            }
+        }
+    });
+</script>
+
+<script>
+    var ServiceSwiper = new Swiper(".serviceSwiper", {
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            660: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 2.5,
+            }
+        },
+        spaceBetween: 5,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".ourSisCompanies", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".formSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+
+    });
+</script>
+
+<script>
+    function changeBranch() {
+        var selectedBranch = document.getElementById("branchDropdown").value;
+        var tabs = document.querySelectorAll('.tab-pane');
+
+        // Hide all tabs
+        tabs.forEach(function(tab) {
+            tab.classList.remove('show', 'active');
+        });
+
+        // Show the selected tab
+        var selectedTab = document.querySelector(selectedBranch);
+        selectedTab.classList.add('show', 'active');
+    }
+</script>
+
+<!-- landing page script -->
+<script>
+    var swiper = new Swiper(".formSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            freeMode: true,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: { // Ensure it applies to all smaller screens
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                },
+                660: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 30,
+                }
+            },
+        });
+    }
+
+    initializeSwiper(".partnershipSwiper");
+    initializeSwiper(".vectorSwiper");
+</script>
+
+<script>
+    function initializeSwiper(className) {
+        return new Swiper(className, {
+            freeMode: true,
+            breakpoints: {
+                0: { // Ensure it applies to all smaller screens
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                    loop: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    },
+                },
+                660: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    loop: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    },
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            },
+        });
+    }
+    initializeSwiper(".sisCompanySwiper");
+</script>
+
+<script>
+    var swiper = new Swiper(".homeSwiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2800,
+            disableOnInteraction: false,
+        },
+        loop: true,
+    });
+</script>
+
+<script>
+    var staffingSolution = new Swiper(".staffSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            600: {
+                slidesPerView: 1,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        }
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".mechPlacementSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<script>
+    var swiperYoutube = new Swiper(".youtubeSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+    });
+</script>  
+  <script>
+   const CAREER_FORM = document.getElementById("careerForm");
+
+  let isFormSubmit = false;
+
+  CAREER_FORM.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    
+    if (isFormSubmit) return; // Prevent multiple submissions
+    isFormSubmit = true;
+
+    document.querySelector(".btn--submit").classList.add("d-none");
+    document.querySelector(".btn--submitting").classList.remove("d-none");
+
+    const dataCareer = new FormData(CAREER_FORM);
+    const actionCareer = e.target.action;
+
+    try {
+      const res = await fetch(actionCareer, {
+        method: "POST",
+        body: dataCareer,
+      });
+      console.log(res, "response");
+      window.location = "/thank-you";
+    } catch (e) {
+      console.error(e, "errr");
+    } finally {
+      isFormSubmit = false;
+    }
+  });
+</script>
+
+<script>
+   const CAREER_COMMON_FORM = document.getElementById("careerCommonForm");
+
+  let isCareerFormSubmit = false;
+
+  CAREER_COMMON_FORM.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    
+    if (isCareerFormSubmit) return; // Prevent multiple submissions
+    isCareerFormSubmit = true;
+
+    document.querySelector(".btn--submit").classList.add("d-none");
+    document.querySelector(".btn--submitting").classList.remove("d-none");
+
+    const data = new FormData(CAREER_COMMON_FORM);
+    const action = e.target.action;
+
+    try {
+      const res = await fetch(action, {
+        method: "POST",
+        body: data,
+      });
+      console.log(res, "response");
+      window.location = "/thank-you";
+    } catch (e) {
+      console.error(e, "errr");
+    } finally {
+      isCareerFormSubmit = false;
+    }
+  });
+</script>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'sg2plzcpnl505653'},{'dcenter':'sg2'},{'cp_id':'11003479'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
+
+
